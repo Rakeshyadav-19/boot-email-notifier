@@ -13,9 +13,16 @@ Easily receive an email every time your Linux machine boots up. Reliable, robust
 - ✅ Easy systemd integration (user or system-wide)
 - ✅ Clear logging for troubleshooting
 
-## Setup
+## Auto Setup : To be updated soon
 
----
+### Use the install script
+
+```bash
+chmod +x install.sh
+./install.sh
+```
+
+## Manual Setup
 
 ### 1. Install dependencies
 
@@ -24,12 +31,16 @@ sudo dnf install msmtp   # Fedora
 sudo apt install msmtp   # Ubuntu/Debian
 ```
 
+---
+
 ### 2. Clone this repo
 
 ```bash
 git clone https://github.com/rakeshyadav-19/boot-email-notifier.git
 cd boot-email-notifier
 ```
+
+---
 
 ### 3. Configure `.env`
 
@@ -43,6 +54,8 @@ Example: abcd efgh ijkl mnop → use it without spaces → abcdefghijklmnop.
 cp .env.example .env
 nano .env
 ```
+
+---
 
 ### 4. Make script executable
 
@@ -142,4 +155,4 @@ Contributions are welcome! Please follow these steps:
 
 ## Versioning
 
-v1.0.0
+We use [Semantic Versioning](https://semver.org/) for versioning.
