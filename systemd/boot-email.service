@@ -1,0 +1,14 @@
+[Unit]
+Description=Send boot email notification
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+# %h expands to the home directory of the user
+ExecStart=%h/boot-email-notifier/scripts/send_boot_mail.sh
+# Run as the user who owns the repo (replace if you want a specific user)
+User=%i
+
+[Install]
+WantedBy=multi-user.target
